@@ -1,0 +1,198 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# DynamoDB Local
+.dynamodb/
+dynamodb_local_*
+*.db
+*.sqlite
+*.sqlite3
+dynamodb-data/
+shared-local-instance.db
+
+# AWS credentials and config
+.aws/
+credentials
+config
+aws-exports.js
+aws-exports.json
+aws-config.json
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.serverless/
+.serverless_nextjs/
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+*.d.ts.map
+*.js.map
+*.d.ts
+!*.d.ts
+
+# Seed data (keep structure, ignore actual data)
+src/seed/data/*.json
+!src/seed/data/.gitkeep
+seed/data/*.json
+!seed/data/.gitkeep
+
+# Logs
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# Testing
+coverage/
+.nyc_output/
+.nyc_output
+test-results/
+*.test.ts
+*.spec.ts
+junit.xml
+
+# Security
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+*.p8
+*.p7b
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+*.backup
+*.dump
+
+# Debug
+debug.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Serverless
+.serverless/
+.serverless_plugins/
+
+# Jest
+.jest-cache/
+.eslintcache
+.prettiercache
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+*.pid
+*.pid.lock
+
+# PM2
+.pm2/
+pm2-*.log
+
+# Environment-specific
+.venv/
+venv/
+ENV/
+env/
+virtualenv/
+
+# Elastic Beanstalk
+.elasticbeanstalk/
+
+# Redis
+dump.rdb
+
+# Firebase
+.firebase/
+firebase-debug.log
+*.firebaserc.local
+
+# Sentry
+.sentryclirc
+sentry.properties
+
+# Custom application specific
+uploads/
+downloads/
+temp-files/
+assets/temp/
+!assets/.gitkeep
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+
+# SAM
+.aws-sam/
+samconfig.toml
+
+# GraphQL
+.graphqlconfig
+.graphql-schema.json
+
+# Prisma
+prisma/*.db
+prisma/dev.db
+prisma/dev.db-journal
+!prisma/schema.prisma
+
+# Kubernetes
+*.kubeconfig
+!kubeconfig
+.kubectl/
