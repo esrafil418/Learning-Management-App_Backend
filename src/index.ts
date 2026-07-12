@@ -5,8 +5,12 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import * as dynamoose from "dynamoose";
-import { createClerkClient } from "@clerk/express";
-import userClerkRoutes from "./routes/userClerkRoutes"
+import {
+	clerkMiddleware,
+	createClerkClient,
+	requireAuth,
+} from "@clerk/express";
+import userClerkRoutes from "./routes/userClerkRoutes";
 
 // Route Imports
 import courseRoutes from "./routes/courseRoutes";
@@ -33,6 +37,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
+app.use(clerkMiddleware());
 
 // Routes
 app.get("/", (req, res) => {
@@ -40,7 +45,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/courses", courseRoutes);
-app.use("/users/clerk", userClerkRoutes)
+app.use("/users/clerk", userClerkRoutes);
 
 // Server
 const port = process.env.PORT || 3000;
